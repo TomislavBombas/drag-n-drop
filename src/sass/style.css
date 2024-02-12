@@ -1,0 +1,59 @@
+*,
+p {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+}
+#root {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100dvw;
+  height: 100dvh;
+}
+.dnd-wrapper {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+}
+.task,
+.list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+.list {
+  width: 20rem;
+}
+.task-header,
+.list-header {
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.description {
+  padding: 0.25rem 1rem;
+}
+
+.dnd-handle {
+  cursor: pointer;
+  display: block;
+}
+.dnd-handle p {
+  pointer-events: none;
+}
+.is-being-dragged {
+  position: fixed;
+  transform: rotate(-5deg);
+}
